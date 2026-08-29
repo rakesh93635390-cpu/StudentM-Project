@@ -14,7 +14,7 @@ const Edite = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/students")
+    axios.get(`${import.meta.env.VITE_API_URL}/api/students`)
       .then((res) => {
 
         const student = res.data.find(
