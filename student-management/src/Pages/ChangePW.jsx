@@ -45,7 +45,7 @@ const ChangePW = () => {
 
       // Send request to backend
       const res = await axios.put(
-        `${import.meta.env.VITE_API_URL}api/faculty/change-password`,
+        `${import.meta.env.VITE_API_URL}/api/faculty/change-password`,
         {
           currentPassword: currentP,
           newPassword: newP
