@@ -24,8 +24,9 @@ res.json(result.rows)
     }
     
     catch(err){
-        res.status(500).json({
-            message:"Error can't get"
+        console.log(err);
+    res.status(500).json({
+      message: err.message
         })
     }
 })
