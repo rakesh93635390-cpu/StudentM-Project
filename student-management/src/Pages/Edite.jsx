@@ -57,7 +57,7 @@ const Edite = () => {
     try {
 
       await axios.put(
-        `http://localhost:3000/api/students/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/students/${id}`,
         {
           name: name,
           register_no: registerNo,

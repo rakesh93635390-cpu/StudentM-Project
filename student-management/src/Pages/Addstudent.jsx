@@ -36,7 +36,7 @@ const Addstudent = () => {
     };
 
     axios.post(
-      "http://localhost:3000/api/students",
+      `${import.meta.env.VITE_API_URL}/api/students`,
       studentData
     )
       .then((res) => {

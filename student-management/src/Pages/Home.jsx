@@ -31,7 +31,7 @@ const Home = () => {
     try {
 
       await axios.delete(
-        `http://localhost:3000/api/students/${id}`
+        `${import.meta.env.VITE_API_URL}/api/students/${id}`
       )
 
       setStudents((prevStudents) =>
@@ -72,7 +72,7 @@ const Home = () => {
 
   useEffect(() => {
 
-    axios.get("http://localhost:3000/api/students")
+    axios.get(`${import.meta.env.VITE_API_URL}/api/students`)
 
       .then((res) => {
 
